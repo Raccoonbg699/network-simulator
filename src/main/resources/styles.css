@@ -1,0 +1,521 @@
+/* Global variables */
+.root {
+    -fx-font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    -accent-color: #3b82f6;
+    -accent-hover: #2563eb;
+    -bg-dark: #0f172a;    /* Deep Navy/Black */
+    -surface-dark: #1e293b; /* Slate Panels */
+    -surface-light: #334155;
+    -text-light: #f8fafc;  /* White text */
+    -text-muted: #94a3b8;
+    -border-dark: #334155;
+    -success-color: #10b981;
+    -danger-color: #ef4444;
+}
+
+/* Force DARK THEME globally */
+.root.dark {
+    -fx-background-color: -bg-dark;
+}
+
+/* --- LABELS & TEXT --- */
+.root.dark .label, 
+.root.dark .text,
+.root.dark .tab-label {
+    -fx-text-fill: -text-light;
+}
+
+/* --- BUTTONS --- */
+.root.dark .button {
+    -fx-background-color: -surface-light;
+    -fx-text-fill: -text-light;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-border-color: -border-dark;
+    -fx-padding: 8 16;
+    -fx-cursor: hand;
+}
+
+.root.dark .button:hover {
+    -fx-background-color: #475569; /* Even lighter for hover */
+    -fx-border-color: -accent-color;
+}
+
+.root.dark .button.primary {
+    -fx-background-color: -accent-color;
+    -fx-border-color: -accent-color;
+}
+
+.root.dark .button.primary:hover {
+    -fx-background-color: -accent-hover;
+}
+
+/* Icon Buttons in Toolbar */
+.root.dark .icon-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-font-size: 18px;
+    -fx-padding: 5;
+}
+
+.root.dark .icon-button:hover {
+    -fx-background-color: -surface-dark;
+    -fx-border-color: -border-dark;
+}
+
+.root.dark .icon-button:selected {
+    -fx-background-color: -accent-color;
+    -fx-text-fill: white;
+}
+
+/* --- MENU BAR --- */
+.root.dark .menu-bar {
+    -fx-background-color: -surface-dark;
+    -fx-border-color: transparent transparent -border-dark transparent;
+}
+
+.root.dark .tool-bar {
+    -fx-background-color: -surface-dark;
+    -fx-border-color: transparent transparent -border-dark transparent;
+}
+
+.root.dark .tool-bar .separator {
+    -fx-background-color: -border-dark;
+}
+
+.root.dark .menu-bar .label {
+    -fx-text-fill: -text-light;
+}
+
+.root.dark .context-menu,
+.root.dark .menu-item:focused {
+    -fx-background-color: -surface-dark;
+}
+
+.root.dark .menu-item .label {
+    -fx-text-fill: -text-light;
+}
+
+/* Sidebar Sidebar Buttons */
+.root.dark .tool-sidebar-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-cursor: hand;
+    -fx-padding: 8;
+}
+
+.root.dark .tool-sidebar-button:hover {
+    -fx-background-color: -surface-light;
+}
+
+.root.dark .tool-sidebar-button:selected {
+    -fx-background-color: -accent-color;
+    -fx-border-color: -accent-hover;
+}
+
+.root.dark .tool-sidebar-button:selected .label {
+    -fx-text-fill: white;
+}
+
+.root.dark .toolbar-left {
+    -fx-background-color: -surface-dark;
+    -fx-border-color: transparent -border-dark transparent transparent;
+    -fx-padding: 10;
+    -fx-spacing: 10;
+}
+
+/* --- TAB PANES GLOBAL --- */
+.tab-pane {
+    -fx-tab-min-height: 35px;
+}
+
+.tab-pane .tab-header-area {
+    -fx-padding: 5 5 0 5;
+    -fx-background-color: #f1f5f9; /* Light gray background for light mode */
+}
+
+.tab-pane .tab-header-background {
+    -fx-background-color: transparent;
+}
+
+.tab-pane .tab {
+    -fx-background-color: #e2e8f0;
+    -fx-background-insets: 0 1 0 1;
+    -fx-background-radius: 4 4 0 0;
+    -fx-padding: 5 15;
+}
+
+.tab-pane .tab:hover {
+    -fx-background-color: #cbd5e1;
+}
+
+.tab-pane .tab:selected {
+    -fx-background-color: white;
+    -fx-border-color: #3b82f6 transparent transparent transparent;
+    -fx-border-width: 3 0 0 0;
+}
+
+.tab-pane .tab-label {
+    -fx-text-fill: #475569; /* Darker gray for readability in light mode */
+    -fx-font-weight: bold;
+}
+
+.tab-pane .tab:selected .tab-label {
+    -fx-text-fill: #1e293b;
+}
+
+/* DARK THEME OVERRIDES */
+.root.dark .tab-pane,
+.tab-pane.dark {
+    -fx-background-color: -bg-dark;
+}
+
+.root.dark .tab-pane .tab-header-area,
+.tab-pane.dark .tab-header-area {
+    -fx-background-color: -surface-dark;
+    -fx-border-color: transparent transparent -border-dark transparent;
+}
+
+.root.dark .tab-pane .tab-header-background,
+.tab-pane.dark .tab-header-background {
+    -fx-background-color: -surface-dark;
+}
+
+.root.dark .tab-pane .tab,
+.tab-pane.dark .tab {
+    -fx-background-color: transparent;
+    -fx-padding: 8 20;
+    -fx-background-radius: 0;
+    -fx-border-width: 0;
+}
+
+.root.dark .tab-pane .tab:hover,
+.tab-pane.dark .tab:hover {
+    -fx-background-color: -surface-light;
+}
+
+.root.dark .tab-pane .tab:selected,
+.tab-pane.dark .tab:selected {
+    -fx-background-color: -bg-dark;
+    -fx-border-color: transparent transparent -accent-color transparent;
+    -fx-border-width: 0 0 3 0;
+}
+
+.root.dark .tab-pane .tab-label,
+.tab-pane.dark .tab-label {
+    -fx-text-fill: -text-muted;
+}
+
+.root.dark .tab-pane .tab:selected .tab-label,
+.tab-pane.dark .tab:selected .tab-label {
+    -fx-text-fill: -accent-color;
+    -fx-font-weight: bold;
+}
+
+/* Specific fix for the Bottom Palette to remove extra padding if needed */
+.root.dark .palette-bottom .tab-header-area {
+    -fx-padding: 0;
+}
+
+/* --- PALETTE ITEMS --- */
+.root.dark .palette-item {
+    -fx-background-color: -bg-dark;
+    -fx-border-color: -border-dark;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 8;
+    -fx-cursor: hand;
+    -fx-transition: all 0.2s;
+}
+
+.root.dark .palette-item:hover {
+    -fx-border-color: -accent-color;
+    -fx-background-color: -surface-dark;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.root.dark .palette-item .label {
+    -fx-text-fill: -text-muted;
+    -fx-font-size: 10px;
+}
+
+.root.dark .palette-item:hover .label {
+    -fx-text-fill: -text-light;
+}
+
+/* --- SCROLL PANES --- */
+.root.dark .scroll-pane,
+.root.dark .scroll-pane > .viewport,
+.root.dark .scroll-pane .content {
+    -fx-background-color: transparent !important;
+}
+
+.root.dark .scroll-bar:vertical,
+.root.dark .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+
+.root.dark .scroll-bar .thumb {
+    -fx-background-color: -surface-light;
+    -fx-background-radius: 10;
+}
+
+/* --- CANVAS & DESKTOP --- */
+.canvas-container {
+    -fx-background-color: -bg-dark;
+}
+
+.connection-line {
+    -fx-stroke: -text-muted;
+    -fx-stroke-width: 2;
+    -fx-stroke-dash-array: 5;
+}
+
+.connection-line:hover {
+    -fx-stroke: -accent-color;
+    -fx-stroke-width: 4;
+}
+
+.connection-line-broken {
+    -fx-stroke: -danger-color;
+    -fx-stroke-width: 2;
+    -fx-stroke-dash-array: 10 5;
+}
+
+/* --- TABLE VIEW --- */
+.root.dark .table-view {
+    -fx-background-color: -bg-dark;
+    -fx-border-color: -border-dark;
+}
+
+.root.dark .table-view .column-header,
+.root.dark .table-view .column-header-background {
+    -fx-background-color: -surface-dark;
+}
+
+.root.dark .table-view .column-header .label {
+    -fx-text-fill: -text-light;
+    -fx-font-weight: bold;
+}
+
+.root.dark .table-view .table-row-cell {
+    -fx-background-color: -bg-dark;
+    -fx-border-color: transparent transparent #1e293b transparent;
+}
+
+.root.dark .table-view .table-row-cell:filled:hover {
+    -fx-background-color: -surface-dark;
+}
+
+.root.dark .table-view .table-row-cell:filled:selected {
+    -fx-background-color: -accent-color;
+}
+
+.root.dark .table-view .table-cell {
+    -fx-text-fill: -text-light;
+}
+
+.root.dark .text-area .content {
+    -fx-background-color: #020617;
+}
+
+.root.dark .list-view,
+.list-view.dark,
+.root.dark .list-view .virtual-flow,
+.list-view.dark .virtual-flow {
+    -fx-background-color: -bg-dark;
+}
+
+.root.dark .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: -text-light;
+}
+
+.root.dark .list-cell:filled:hover {
+    -fx-background-color: -surface-dark;
+}
+
+.root.dark .list-cell:filled:selected {
+    -fx-background-color: -accent-color;
+}
+
+/* --- DIALOGS & ALERTS --- */
+.dialog-pane {
+    -fx-background-color: -bg-dark;
+}
+
+.dialog-pane > .expandable-content {
+    -fx-background-color: -bg-dark;
+}
+
+.dialog-pane > .header-panel {
+    -fx-background-color: -surface-dark;
+}
+
+.dialog-pane > .header-panel > .label {
+    -fx-text-fill: -text-light;
+    -fx-font-weight: bold;
+}
+
+.dialog-pane > .content {
+    -fx-background-color: -bg-dark;
+    -fx-text-fill: -text-light;
+}
+
+.dialog-pane .button-bar {
+    -fx-background-color: -surface-dark;
+    -fx-padding: 10;
+}
+
+/* Fix for buttons inside dialogs specifically */
+.dialog-pane .button {
+    -fx-background-color: -surface-light;
+    -fx-text-fill: white;
+}
+
+.dialog-pane .button:hover {
+    -fx-background-color: -accent-color;
+}
+
+/* Fix for the "graphic" area in alerts */
+.dialog-pane .graphic-container {
+    -fx-background-color: -bg-dark;
+}
+
+/* Fix for the lookup area in ChoiceDialog/TextInputDialog */
+.dialog-pane .text-field {
+    -fx-background-color: #020617;
+    -fx-text-fill: white;
+    -fx-border-color: -border-dark;
+}
+
+/* --- DEVICE NODE --- */
+.device-label {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -text-light;
+    -fx-padding: 2 5;
+    -fx-background-color: rgba(15, 23, 42, 0.7);
+    -fx-background-radius: 4;
+}
+
+/* --- CONFIG WINDOW --- */
+.physical-pane {
+    -fx-background-color: -bg-dark;
+}
+
+.module-list {
+    -fx-background-color: -surface-dark;
+    -fx-border-color: transparent -border-dark transparent transparent;
+}
+
+.module-item {
+    -fx-background-color: -bg-dark;
+    -fx-border-color: -border-dark;
+    -fx-border-radius: 4;
+    -fx-padding: 8;
+    -fx-cursor: hand;
+}
+
+.module-item:hover {
+    -fx-border-color: -accent-color;
+}
+
+.desktop-wallpaper {
+    -fx-background-color: linear-gradient(to bottom right, #1e3a8a, #3b82f6);
+}
+
+.wallpaper-azure { -fx-background-color: linear-gradient(to bottom right, #1e3a8a, #3b82f6); }
+.wallpaper-nebula { -fx-background-color: linear-gradient(to bottom right, #2e1065, #7e22ce); }
+.wallpaper-forest { -fx-background-color: linear-gradient(to bottom right, #064e3b, #10b981); }
+.wallpaper-classic { -fx-background-color: #475569; }
+
+.taskbar {
+    -fx-background-color: rgba(15, 23, 42, 0.9);
+    -fx-border-color: rgba(255, 255, 255, 0.1) transparent transparent transparent;
+}
+
+.start-button {
+    -fx-background-color: -accent-color;
+    -fx-padding: 5 15;
+    -fx-background-radius: 0 5 5 0;
+}
+
+.desktop-shortcut {
+    -fx-padding: 10;
+    -fx-alignment: center;
+    -fx-spacing: 5;
+    -fx-cursor: hand;
+    -fx-background-radius: 8;
+    -fx-pref-width: 90;
+}
+
+.desktop-shortcut:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+}
+
+.desktop-shortcut-label {
+    -fx-text-fill: white;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, black, 2, 0, 0, 1);
+    -fx-text-alignment: center;
+}
+
+.background {
+    -fx-background-color: white;
+}
+
+.root.dark .background {
+    -fx-background-color: -bg-dark;
+}
+
+/* --- SPLIT PANE --- */
+.root.dark .split-pane {
+    -fx-background-color: -bg-dark;
+    -fx-border-color: -border-dark;
+}
+
+.root.dark .split-pane:horizontal > .split-pane-divider {
+   -fx-background-color: -border-dark;
+   -fx-border-color: transparent;
+}
+
+.root.dark .split-pane *.horizontal-grabber,
+.root.dark .split-pane *.vertical-grabber {
+    -fx-background-color: -surface-light;
+}
+
+.cli-area {
+    -fx-font-family: 'Consolas', 'Monospace';
+    -fx-font-size: 13px;
+}
+
+/* --- START MENU --- */
+.start-menu {
+    -fx-background-color: #0f172a;
+    -fx-border-color: #334155;
+    -fx-border-width: 1 1 0 0;
+    -fx-background-radius: 0 8 0 0;
+    -fx-border-radius: 0 8 0 0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 15, 0, 0, 0);
+}
+
+.start-menu-item {
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+    -fx-spacing: 12;
+    -fx-alignment: center-left;
+}
+
+.start-menu-item:hover {
+    -fx-background-color: #334155;
+}
+
+.start-menu-item .label {
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+}

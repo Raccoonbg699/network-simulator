@@ -1,0 +1,12 @@
+/home/lenovo/Desktop/diplomen proekt/практика/src/main/java/com/networksim/NetworkSimApp.java
+/home/lenovo/Desktop/diplomen proekt/практика/src/main/java/com/networksim/MainLauncher.java
+/home/lenovo/Desktop/diplomen proekt/практика/src/main/java/com/networksim/model/Device.java
+/home/lenovo/Desktop/diplomen proekt/практика/src/main/java/com/networksim/model/RouteEntry.java
+/home/lenovo/Desktop/diplomen proekt/практика/src/main/java/com/networksim/logic/PersistenceManager.java
+/home/lenovo/Desktop/diplomen proekt/практика/src/main/java/com/networksim/view/DeviceNode.java
+/home/lenovo/Desktop/diplomen proekt/практика/src/main/java/com/networksim/model/DeviceType.java
+/home/lenovo/Desktop/diplomen proekt/практика/src/main/java/com/networksim/model/Email.java
+/home/lenovo/Desktop/diplomen proekt/практика/src/main/java/com/networksim/logic/RoutingManager.java
+/home/lenovo/Desktop/diplomen proekt/практика/src/main/java/com/networksim/logic/TranslationService.java
+/home/lenovo/Desktop/diplomen proekt/практика/src/main/java/com/networksim/model/Connection.java
+/home/lenovo/Desktop/diplomen proekt/практика/src/main/java/com/networksim/view/ConfigWindow.java

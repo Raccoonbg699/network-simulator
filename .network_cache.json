@@ -1,0 +1,50 @@
+{
+  "devices": [
+    {
+      "id": "c659f6bb-b72f-4bbd-baa6-5be9920b98f5",
+      "name": "PC-0",
+      "type": "PC",
+      "ip": "192.168.1.2",
+      "gateway": "192.168.1.1",
+      "installedModule": "Linksys-WMP300N",
+      "x": 309.0,
+      "y": 203.0,
+      "poweredOn": true
+    },
+    {
+      "id": "81e9fe57-1da7-41d4-a701-9069ddc148ba",
+      "name": "Router",
+      "type": "ROUTER_1941",
+      "ip": "192.168.1.101",
+      "gateway": "0.0.0.0",
+      "installedModule": "HWIC-1GE",
+      "x": 181.0,
+      "y": 507.0,
+      "poweredOn": true
+    },
+    {
+      "id": "b6c201e7-359e-4adf-84de-6d14362ac0cc",
+      "name": "CLOUD-2",
+      "type": "CLOUD",
+      "ip": "",
+      "gateway": "0.0.0.0",
+      "x": 1540.0,
+      "y": 69.0,
+      "poweredOn": true
+    }
+  ],
+  "connections": [
+    {
+      "fromId": "c659f6bb-b72f-4bbd-baa6-5be9920b98f5",
+      "toId": "81e9fe57-1da7-41d4-a701-9069ddc148ba",
+      "type": "Copper",
+      "weight": 1
+    },
+    {
+      "fromId": "81e9fe57-1da7-41d4-a701-9069ddc148ba",
+      "toId": "b6c201e7-359e-4adf-84de-6d14362ac0cc",
+      "type": "Copper",
+      "weight": 1
+    }
+  ]
+}
